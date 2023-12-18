@@ -7,7 +7,7 @@ const Header = () => {
     return (
       <div className={Styles.container}>
          <div className={Styles.logotipo}>
-           <Image src={Logo} alt="logotipo" priority={true}/>
+           <Image src={Logo} alt="Logo" priority={true}/>
          </div>  
          <div className={Styles.menu}>
             <Link href="https://google.com">Home</Link>
