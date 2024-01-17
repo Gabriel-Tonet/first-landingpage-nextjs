@@ -6,14 +6,14 @@
     font-size: 16px;
     font-weight: bold;
     border: none;
-}
 
-.primary {
-    background-color: $green-color;
-    color: $white-color;
-}
+    &.primary {
+      background-color: $green-color;
+      color: $white-color;
+    }
 
-.secundary {
-    background-color: $white-color;
-    color: $purple-color;
+    &.secundary {
+      background-color: $white-color;
+      color: $purple-color;
+    }
 }
