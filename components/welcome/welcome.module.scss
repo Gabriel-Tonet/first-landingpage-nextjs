@@ -1,3 +1,17 @@
+@import "/src/app/mixins/padding.scss";
+
+.container{
+    @include Padding;
+    height: 100vh;
+    padding-top: 219px;
+    background-image: url("/images/fundoWelcome.svg");
+    background-size: cover; //rever
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
 .text {
     h1{
         font-weight: bold;
@@ -6,6 +20,10 @@
     
     p{
         font-size: 30px;
-        opacity: 0.8;
+        opacity: 0.7;
     }
+}
+
+.image {
+    text-align: end;
 }
