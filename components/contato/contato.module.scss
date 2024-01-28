@@ -7,7 +7,11 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: flex-start;
     justify-content: space-between;
-    gap: 150px;
+    gap: 15px 9rem;
+    background-image: url("/images/fundoWelcome.svg");
+    background-size: cover; //rever
+    background-repeat: no-repeat;
+    margin-bottom: 10rem;
 }
 
 .texts {
@@ -50,3 +54,17 @@
     }
 }
 
+.footer {
+    padding-left: 3rem;
+    padding-right: 11rem;
+    grid-column-start: 2;
+    text-align: center;
+    font-size: 18px;
+    line-height: 2rem;
+    color: $gray-color;
+
+    span {
+        color: $white-color;
+        cursor: pointer;
+    }
+}
