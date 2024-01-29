@@ -10,8 +10,8 @@ const Welcome = () => {
             <p>Somos uma agência de performance digital, aceleramos vendas e aquisição de leads para grandes marcas.</p>
             <Button title="Aumentar vendas" kind="secundary" />
         </div>
-        <div className={Styles.image}>
-           <Image src={BannerWelcome} alt="Banner Welcome"/>
+        <div className={Styles.containerImage}>
+            <Image src={BannerWelcome} alt="Banner Welcome" className={Styles.image} />
         </div>
     </div>
 }
