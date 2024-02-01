@@ -4,6 +4,17 @@
     padding: 0 11.25rem; //1rem = 16px
 
     @include Phone {
-        padding: 0 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    @include Tablet {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    @include Laptop {
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 }

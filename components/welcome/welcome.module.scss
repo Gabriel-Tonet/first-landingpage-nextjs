@@ -17,6 +17,16 @@
         grid-template-columns: 1fr;
         grid-template-rows: max-content;
         height: 100%;
+        padding-top: 1rem;
+    }
+
+    @include Tablet {
+        height: 100%;
+        padding-top: 5rem;
+    }
+
+    @include Laptop {
+        padding-top: 5rem;
     }
 }
 
