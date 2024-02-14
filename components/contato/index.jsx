@@ -6,13 +6,21 @@ import Styles from "./contato.module.scss";
 const Contato = () => {
   const handleSubmitForm = async (values) => {
     "use server";
-    console.log("entrou aqui");
+
     const payload = {
       body: {
-        messageBody: `Nome: ${values.name}, Email: ${values.email}, Telefone: ${values.phone}, Site: ${values.website}, Midia: ${values.midia}`,
+        messageBody: `
+        Nome: ${values.name}
+
+        Email: ${values.email}
+
+        Telefone: ${values.phone}
+
+        Site: ${values.website}
+        
+        Mídia: ${values.midia}`
       },
     };
-
     const data = await GET(payload);
   };
 

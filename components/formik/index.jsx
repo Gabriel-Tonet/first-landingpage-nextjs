@@ -15,29 +15,32 @@ export const FormFormik = ({ handleSubmitForm }) => {
       midia: "",
     },
     validationSchema: Yup.object({
-      name: Yup.string().required("Campo Obrigatório"),
-      email: Yup.string()
-        .email("E-mail inválido")
+      name: Yup
+        .string()
         .required("Campo Obrigatório"),
-      phone: Yup.string()
+      email: Yup
+        .string().email("E-mail inválido")
+        .required("Campo Obrigatório"),
+      phone: Yup
+        .string()
         .matches(
           /^(\+55)?\s?(?:\(?([1-9]{2})\)?\s?)?(?:(9\d{4})[-\s]?(\d{4})|([2-9]\d{3})[-\s]?(\d{4}))$/,
           "Digite um telefone válido"
         )
         .required("Campo Obrigatório"),
-      website: Yup.string().required("Campo Obrigatório"),
-      midia: Yup.string().required("Campo Obrigatório"),
+      website: Yup
+        .string()
+        .required("Campo Obrigatório"),
+      midia: Yup
+        .string()
+        .required("Campo Obrigatório"),
     }),
     validateOnBlur: true,
     validateOnChange: false,
     onSubmit: async (values) => {
       handleSubmitForm(values);
-      console.log("teste");
     },
   });
-
-  console.log("teste errors: ", formik.errors);
-  console.log("teste values: ", formik.values);
 
   return (
     <form id="formulario" onSubmit={formik.handleSubmit}>
