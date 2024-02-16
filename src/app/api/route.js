@@ -1,7 +1,7 @@
 import { SMTPClient } from 'emailjs';
 import { NextResponse } from 'next/server';
 
-export default async function GET(request) {
+export default async function (request) {
     const { messageBody } = request.body;
 
     const client = new SMTPClient({

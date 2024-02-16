@@ -7,8 +7,10 @@ const Contato = () => {
   const handleSubmitForm = async (values) => {
     "use server";
 
+    console.log("entrou aqui");
+
     const payload = {
-      body: {
+      body: ({
         messageBody: `
         Nome: ${values.name}
 
@@ -19,7 +21,7 @@ const Contato = () => {
         Site: ${values.website}
         
         Mídia: ${values.midia}`
-      },
+      }),
     };
     const data = await GET(payload);
   };
