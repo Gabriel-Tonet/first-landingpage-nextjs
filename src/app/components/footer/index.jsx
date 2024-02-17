@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import Styles from "./footer.module.scss";
-import Logo from "/src/app/images/logo.svg";
-import IconInstagram from "/src/app/images/icon-instagram.svg";
-import IconFacebook from "/src/app/images/icon-facebook.svg";
-import IconLinkedin from "/src/app/images/icon-linkedin.svg";
-import IconYoutube from "/src/app/images/icon-youtube.svg";
+import Logo from "/public/images/logo.svg";
+import IconInstagram from "/public/images/icon-instagram.svg";
+import IconFacebook from "/public/images/icon-facebook.svg";
+import IconLinkedin from "/public/images/icon-linkedin.svg";
+import IconYoutube from "/public/images/icon-youtube.svg";
 
 const Footer = () => {
     return (

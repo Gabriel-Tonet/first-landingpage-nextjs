@@ -1,6 +1,6 @@
 import Button from "../button";
 import Styles from "./welcome.module.scss";
-import BannerWelcome from "/src/app/images/bannerWelcome.svg";
+import BannerWelcome from "/public/images/bannerWelcome.svg";
 import Image from "next/image";
 
 const Welcome = () => {

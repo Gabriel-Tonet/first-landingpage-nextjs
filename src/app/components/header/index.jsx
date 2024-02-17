@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "/src/app/images/logo.svg";
+import Logo from "/public/images/logo.svg";
 import Styles from "./header.module.scss";
 import Button from "../button";
 

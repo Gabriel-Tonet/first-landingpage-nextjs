@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Styles from "./features.module.scss";
-import Icon from "/src/app/images/icon.svg";
+import Icon from "/public/images/icon.svg";
 
 const Features = () => {
     return (
