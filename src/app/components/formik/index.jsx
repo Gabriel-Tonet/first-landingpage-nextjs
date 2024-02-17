@@ -51,6 +51,8 @@ export const FormFormik = ({ handleSubmitForm }) => {
       try {
         await handleSubmitForm(values);
         setModalSuccess(true);
+        formik.resetForm();
+        console.log(formik.values);
       } catch (error) {
         setFailModal(true)
         console.error('Erro ao enviar o formulário:', error);
@@ -60,8 +62,6 @@ export const FormFormik = ({ handleSubmitForm }) => {
   });
 
   const closeModal = () => {
-    formik.resetForm();
-    console.log(formik.values);
     setFailModal(false);
     setModalSuccess(false);
   };
