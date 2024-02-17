@@ -51,30 +51,23 @@ export const FormFormik = ({ handleSubmitForm }) => {
       try {
         await handleSubmitForm(values);
         setModalSuccess(true);
-        console.log("abriu")
-        formik.resetForm(initialValues);
-        console.log("reset", formik.resetForm())
       } catch (error) {
         setFailModal(true)
-        console.log("abriu 2")
         console.error('Erro ao enviar o formulário:', error);
       }
       setLoading(false);
     },
   });
 
-
-
   const closeModal = () => {
+    formik.resetForm();
+    console.log(formik.values);
     setFailModal(false);
     setModalSuccess(false);
-    console.log("fechou")
   };
 
   console.log("teste errors: ", formik.errors);
   console.log("teste values: ", formik.values);
-
-
 
   return (
     <>
@@ -128,8 +121,8 @@ export const FormFormik = ({ handleSubmitForm }) => {
           name="midia"
           placeholder="Orçamento para mídia"
           options={[
-            { label: "Instagram", value: "instagram" },
-            { label: "Facebook", value: "facebook" },
+            { label: "Instagram", value: "Instagram" },
+            { label: "Facebook", value: "Facebook" },
           ]}
           onChange={formik.handleChange}
           value={formik.values.midia}
