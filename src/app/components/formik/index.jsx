@@ -13,6 +13,7 @@ export const FormFormik = ({ handleSubmitForm }) => {
   const [isloading, setLoading] = useState(false);
   const [successModal, setModalSuccess] = useState(false);
   const [failModal, setFailModal] = useState(false);
+  const [formKey, setFormKey] = useState(0);
 
   const formik = useFormik({
     initialValues: {
@@ -51,11 +52,9 @@ export const FormFormik = ({ handleSubmitForm }) => {
       try {
         await handleSubmitForm(values);
         setModalSuccess(true);
-        formik.resetForm();
-        console.log(formik.values);
+        setFormKey(prevKey => prevKey + 1);
       } catch (error) {
-        setFailModal(true)
-        console.error('Erro ao enviar o formulário:', error);
+        setFailModal(true);
       }
       setLoading(false);
     },
@@ -66,15 +65,12 @@ export const FormFormik = ({ handleSubmitForm }) => {
     setModalSuccess(false);
   };
 
-  console.log("teste errors: ", formik.errors);
-  console.log("teste values: ", formik.values);
-
   return (
     <>
       {successModal && <SuccessModal closeModal={closeModal} />}
       {failModal && <FailModal closeModal={closeModal} />}
       {isloading && <Loading />}
-      <form id="formulario" onSubmit={formik.handleSubmit}>
+      <form key={formKey} id="formulario" onSubmit={formik.handleSubmit}>
         <Input
           id="name"
           name="name"

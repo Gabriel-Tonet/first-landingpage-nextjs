@@ -7,8 +7,6 @@ const Contato = () => {
   const handleSubmitForm = async (values) => {
     "use server";
 
-    console.log("entrou aqui");
-
     const payload = {
       body: ({
         messageBody: `
