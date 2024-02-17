@@ -16,9 +16,9 @@ const Header = () => {
         <Link href="#features">Cases</Link>
       </div>
       <div className={Styles.action}>
-        <a href="#contato">
+        <Link href="#contato">
           <Button title="Fale conosco" />
-        </a>
+        </Link>
       </div>
     </div>
   );

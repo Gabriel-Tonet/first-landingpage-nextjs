@@ -1,12 +1,17 @@
 @import "/src/app/mixins/colors.scss";
 @import "/src/app/mixins/fonts.scss";
+@import "/src/app/mixins/responsive.scss";
 
 .select {
     @include SizeNormal;
     padding: 22px 17px;
     background-color: $gray4-color;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     font-weight: 300;
     color: $gray5-color;
+
+    @include Phone {
+        padding: 1.3rem;
+    }
 }
