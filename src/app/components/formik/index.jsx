@@ -97,7 +97,6 @@ export const FormFormik = ({ handleSubmitForm }) => {
           name="phone"
           type="text"
           placeholder="Celular/Whatsapp"
-          pattern="^\d{11}$"
           onBlur={formik.handleBlur}
           onChange={formik.handleChange}
           value={StringFormat.formatPhone(formik.values.phone)}
