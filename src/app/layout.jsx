@@ -7,7 +7,7 @@ const roboto = Roboto({
 })
 
 export const metadata = {
-  title: 'Landing Page',
+  title: 'First Landing Page',
   description: 'Site acadêmico',
 }
 

@@ -9,7 +9,7 @@ export function SuccessModal({ closeModal }) {
                 <FiCheckCircle />
                 <p>Email enviado com sucesso!</p>
                 <div className={styles.okButtonContainer} onClick={closeModal}>
-                    <Button title="fechar" />
+                    <Button title="Fechar" />
                 </div>
             </div>
         </div>

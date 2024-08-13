@@ -14,7 +14,6 @@ export const FormFormik = ({ handleSubmitForm }) => {
   const [isloading, setLoading] = useState(false);
   const [successModal, setModalSuccess] = useState(false);
   const [failModal, setFailModal] = useState(false);
-  const [formKey, setFormKey] = useState(0);
 
   const formik = useFormik({
     initialValues: {
@@ -52,8 +51,8 @@ export const FormFormik = ({ handleSubmitForm }) => {
       setLoading(true);
       try {
         await handleSubmitForm(values);
+        formik.resetForm();
         setModalSuccess(true);
-        setFormKey(prevKey => prevKey + 1);
       } catch (error) {
         setFailModal(true);
       }
@@ -71,7 +70,7 @@ export const FormFormik = ({ handleSubmitForm }) => {
       {successModal && <SuccessModal closeModal={closeModal} />}
       {failModal && <FailModal closeModal={closeModal} />}
       {isloading && <Loading />}
-      <form key={formKey} id="formulario" onSubmit={formik.handleSubmit}>
+      <form id="formulario" onSubmit={formik.handleSubmit}>
         <Input
           id="name"
           name="name"
@@ -97,6 +96,7 @@ export const FormFormik = ({ handleSubmitForm }) => {
           name="phone"
           type="text"
           placeholder="Celular/Whatsapp"
+          pattern="^\(\d{2}\) \d{5}-\d{4}$"
           onBlur={formik.handleBlur}
           onChange={formik.handleChange}
           value={StringFormat.formatPhone(formik.values.phone)}

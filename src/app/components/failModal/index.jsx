@@ -9,7 +9,7 @@ export const FailModal = ({ closeModal }) => {
                 <FiXSquare />
                 <p>Não foi possível enviar no momento, tente novamente mais tarde.</p>
                 <div className={styles.okButtonContainer} onClick={closeModal}>
-                    <Button title="fechar" />
+                    <Button title="Fechar" />
                 </div>
             </div>
         </div>
