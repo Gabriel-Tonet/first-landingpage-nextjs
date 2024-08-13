@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import { Loading } from "../loading/index";
 import { SuccessModal } from "../successModal";
 import { FailModal } from "../failModal/index";
+import { StringFormat } from "@/app/utils/masks";
 const { default: Button } = require("../button");
 const { default: Input } = require("../input");
 const { default: Select } = require("../select");
@@ -99,7 +100,7 @@ export const FormFormik = ({ handleSubmitForm }) => {
           pattern="^\d{11}$"
           onBlur={formik.handleBlur}
           onChange={formik.handleChange}
-          value={formik.values.phone}
+          value={StringFormat.formatPhone(formik.values.phone)}
           required
         />
         <Input
